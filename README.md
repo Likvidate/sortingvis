@@ -1,24 +1,2 @@
-# sortingvis
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Current style: 
+![image](https://user-images.githubusercontent.com/67824760/145906146-bf0c11f6-787b-4767-82fa-dbc5f7be2562.png)
