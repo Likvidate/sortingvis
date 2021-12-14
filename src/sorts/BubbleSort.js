@@ -4,17 +4,17 @@ export default new Vue({
   methods: {
     run(arr) {
       arr = [...arr]
-      let isSorted = false
-      let index = arr.length - 1;
-      let counter = 0
+      var isSorted = false
+      var index = arr.length - 1;
+      var counter = 0
       while (!isSorted) {
         isSorted = true
-        for (let i = 0; i < index; i++) {
+        for (var i = 0; i < index; i++) {
           isSorted = false
           if (arr[i] > arr[i + 1]) {
             counter++
 
-            let tmp = arr[i]
+            var tmp = arr[i]
             arr[i] = arr[i + 1]
             arr[i + 1] = tmp
             this.$emit("onItemSwap", {
@@ -25,7 +25,7 @@ export default new Vue({
             })
           }
         }
-        index--;
+        index--
       }
     }
   }
