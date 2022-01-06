@@ -21,8 +21,8 @@ export default {
   },
   data: function() {
     return {
-      isSorting: false,
       array: [],
+      isSorting: false,
       isSorted: false
     }
   },
@@ -45,7 +45,7 @@ export default {
       }
     },
     resetBackgroundColors() {
-      var children = Array.prototype.slice.call(document.querySelector(".bars").children);
+      var children = Array.prototype.slice.call(document.querySelector('.bars').children);
       children.forEach((child) => {
         child.style.backgroundColor = MAIN_BG_COLOR
       })
@@ -53,9 +53,9 @@ export default {
     Bubble () {
       this.isSorting = true
       var counter = 0
-      var time = 0
+      var time = 5
 
-      BubbleSort.$on('onItemSwap', (data) => {
+      BubbleSort.$on(`onItemSwap`, (data) => {
         counter++
         time += 5
         setTimeout(() => {
@@ -72,15 +72,10 @@ export default {
         }, time)
       })
       BubbleSort.run(this.array)
-    }
+    },
   },
-  created () {
-    const tempArray = []
-    for (var i = 0; i < 70; i++) {
-      tempArray.push(this.RandomInt(5, 1000))
-    }
-    this.array = [...tempArray]
-    this.isSorted = false
+  beforeMount() {
+    this.Reset();
   }
 }
 </script>

@@ -17,7 +17,7 @@ export default new Vue({
             var tmp = arr[i]
             arr[i] = arr[i + 1]
             arr[i + 1] = tmp
-            this.$emit("onItemSwap", {
+            this.$emit('onItemSwap', {
               arr: [...arr],
               left: i,
               right: i + 1,
